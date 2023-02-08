@@ -17,9 +17,22 @@ const images = [
 const ulList = document.querySelector(".gallery");
 
 
-images.forEach((image) => {
-  const list = `<li>${image}</li>`;
-  list.insertAdjacentHTML('afterbegin', list);
-});
+const listImages = images.map((image) =>
+  `<li><img class="screen" src="${image.url}" width="300" height ="200" alt="${image.alt}"></li>`).join("");
+
+
+ulList.insertAdjacentHTML('beforeend', listImages);
+  
+const screen = document.querySelectorAll(".screen");
+
+
+
+
+ulList.style.display = "flex";
+ulList.style.gap = "20px";
+ulList.style.listStyle = "none";
+
+
+
 
 
