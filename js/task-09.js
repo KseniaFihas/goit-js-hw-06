@@ -14,7 +14,8 @@ button.addEventListener('click', changeColor => {
   const backGroundColor = getRandomHexColor();
 
   body.style.backgroundColor = backGroundColor;
- 
+
+  color.textContent = backGroundColor;
 
 });
 
